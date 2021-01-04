@@ -9,6 +9,14 @@
   font-weight: 700;
 }
 
+.logo {
+  height: 30px;
+}
+
+.premiere {
+  height: 500px;
+}
+
 .credits {
   font-family: system-ui;
   background: #212429;
@@ -64,19 +72,23 @@ a {
 .featured {
   margin-top: -90px;
   position: relative;
+  overflow: hidden;
 }
 
 .featured-details {
-  border: 1px solid red;
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  background-image: linear-gradient(to top, black 0%, transparent 100%);
+  background-image: linear-gradient(
+    to top,
+    black 0%,
+    black 40%,
+    transparent 100%
+  );
 }
 
 .tags {
-  border: 1px solid pink;
   display: flex;
   justify-content: center;
   gap: 10px;
@@ -84,7 +96,6 @@ a {
 }
 
 .tag {
-  border: 1px solid rebeccapurple;
   display: flex;
 }
 
@@ -106,21 +117,86 @@ a {
   padding-bottom: 2em;
 }
 
-.button{
-    border: 1px solid blue;
+.button {
+  background: whitesmoke;
+  display: flex;
+  align-items: center;
+  padding: 5px 1em 5px 0.5em;
+  border: none;
+  border-radius: 5px;
 }
 
-.button-secondary{
-    border: 1px solid red;
-
+.button::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
 }
 
-.logo {
-  height: 30px;
+.button-secondary {
+  background: none;
+  color: white;
+  font-size: 1.1em;
+  min-width: 100px;
+  cursor: pointer;
+  border: none;
 }
 
-.premiere {
-  height: 500px;
+.button-secondary::before {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 25px;
+  margin: auto;
+  margin-bottom: 5px;
 }
 
-/*1:00:32*/
+.icon-plus::before {
+  background: url("../../images/icons/plus.svg");
+}
+
+.icon-info::before {
+  background: url("../../images/icons/info.svg");
+}
+
+.icon-play::before {
+  background: url("../../images/icons/play.svg");
+}
+
+.list-content {
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+.list-item {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.list-item:first-child {
+  margin: 0;
+}
+
+.list {
+  padding: 0 1em;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer {
+  border: 1px solid red;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: black;
+}
+
+.tab-list{
+  border: 1px solid green;
+}
